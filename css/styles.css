@@ -11257,8 +11257,8 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/contact-form-background.png");
-  background-repeat: no-repeat;
+  background-image: url("../assets/img/family.jpg");
+  background-repeat: repeat-x;
   background-position: center;
 }
 section#contact .section-heading {
