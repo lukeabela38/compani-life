@@ -52,3 +52,50 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("compani-form");
+    const message = document.getElementById("form-message");
+  
+    if (!form) return; // safety check
+  
+    const fadeOut = (el, seconds = 5) => {
+      setTimeout(() => {
+        el.style.transition = "opacity 1s ease";
+        el.style.opacity = 0;
+        setTimeout(() => {
+          el.innerHTML = "";
+          el.style.opacity = 1; // reset for future messages
+        }, 1000);
+      }, seconds * 1000);
+    };
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+  
+        if (response.ok) {
+          message.innerHTML =
+            '<div class="alert alert-success">✅ Thanks for joining Compani™! You’re now part of the disruption.</div>';
+          form.reset();
+        } else {
+          message.innerHTML =
+            '<div class="alert alert-danger">❌ Oops! Something went wrong. Please try again.</div>';
+        }
+      } catch (error) {
+        message.innerHTML =
+          '<div class="alert alert-danger">⚠️ Network error. Please check your connection.</div>';
+      }
+  
+      fadeOut(message, 6); // message disappears after 6 seconds
+    });
+  });
+  
