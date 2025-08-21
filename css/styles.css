@@ -11322,3 +11322,37 @@ section#contact form#contactForm :-ms-input-placeholder {
   border-radius: 15px;                   /* optional rounded corners */
   padding: 2rem;                         /* some breathing room */
 }
+
+/* Testimonials */
+.testimonial-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+/* Pastel backgrounds */
+.pastel-pink   { background: #FFEBEE; }
+.pastel-green  { background: #E8F5E9; }
+.pastel-blue   { background: #E3F2FD; }
+.pastel-orange { background: #FFF3E0; }
+.pastel-purple { background: #F3E5F5; }
+
+/* Tilt effects */
+.tilt-left  { transform: rotate(-2deg); }
+.tilt-right { transform: rotate(2deg); }
+
+/* Stars */
+.stars {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
