@@ -99,3 +99,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", function() {
+    const counterElement = document.getElementById("signupCount");
+  
+    // starting fake count
+    let count = 527;  
+  
+    // animate initial increase (simulate recent growth)
+    let target = count + Math.floor(Math.random() * 20) + 5; // +5 to +25
+    let current = count;
+  
+    function animateCounter() {
+      if (current < target) {
+        current++;
+        counterElement.textContent = current;
+        setTimeout(animateCounter, 50);
+      }
+    }
+    animateCounter();
+  
+    // keep it growing slowly over time (fake "live signups")
+    setInterval(() => {
+      current++;
+      counterElement.textContent = current;
+    }, 10000); // every 10s
+  });
+  
