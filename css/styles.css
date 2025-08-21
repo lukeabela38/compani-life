@@ -11356,3 +11356,105 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
+
+
+.video-ref {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 9999px; /* pill shape */
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.video-ref:hover {
+  background: #0f0f0f;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Videos Page Obnoxious Mode */
+body.obnoxious-videos {
+  background: linear-gradient(45deg, #ff00ff, #ffff00, #00ffff);
+  background-size: 600% 600%;
+  animation: bgshift 12s infinite linear;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+@keyframes bgshift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.video-header h1 {
+  font-size: 3rem;
+  animation: wobble 1s infinite alternate;
+}
+
+@keyframes wobble {
+  0% { transform: rotate(-2deg); color: #ff0000; }
+  100% { transform: rotate(2deg); color: #0000ff; }
+}
+
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.video-card {
+  padding: 1.5rem;
+  border: 8px dashed #000;
+  border-radius: 20px;
+  transform: rotate(-1deg);
+  animation: spinColors 5s infinite linear;
+}
+
+@keyframes spinColors {
+  0% { background: #ffaaaa; }
+  25% { background: #aaffaa; }
+  50% { background: #aaaaff; }
+  75% { background: #ffffaa; }
+  100% { background: #ffaaaa; }
+}
+
+.video-card h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 0 #fff, -2px -2px 0 #000;
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Pastel backgrounds for individual cards */
+.pastel-pink   { background: #FFEBEE; }
+.pastel-green  { background: #E8F5E9; }
+.pastel-blue   { background: #E3F2FD; }
+.pastel-orange { background: #FFF3E0; }
+.pastel-purple { background: #F3E5F5; }
+
+/* Tilt effects */
+.tilt-left  { transform: rotate(-2deg); }
+.tilt-right { transform: rotate(2deg); }
