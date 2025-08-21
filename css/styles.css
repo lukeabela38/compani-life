@@ -11316,7 +11316,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .frosted-glass {
-  background: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
   backdrop-filter: blur(10px);           /* blur background behind it */
   -webkit-backdrop-filter: blur(10px);   /* Safari support */
   border-radius: 15px;                   /* optional rounded corners */
