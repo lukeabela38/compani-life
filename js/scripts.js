@@ -125,3 +125,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 10000); // every 10s
   });
   
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Splash screen & other code...
+  
+    // Auto-update copyright year
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
